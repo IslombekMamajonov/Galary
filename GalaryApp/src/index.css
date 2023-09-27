@@ -1,0 +1,194 @@
+/* ============= GLOBAL CSS =============== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+  --small-text: 0.875rem;
+  --extra-small-text: 0.7em;
+  /* rest of the vars */
+
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+  --view-width: 90vw;
+}
+body {
+  background-image:url(../src/assets/Без\ названия.jpg);
+  background-size: cover;
+  font-family:Arial, Helvetica, sans-serif;
+;
+}
+
+.text {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+  font-size: 28px;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* buttons */
+button{
+  border-radius: 18px;
+}
+.btn {
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 16px;
+
+}
+
+
+.btn-block {
+  width: 100%;
+}
+
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.form-input{
+  border: none;
+  padding: 16px;
+  border-radius: 15px;
+  font-size: 24px;
+}
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-textarea {
+  height: 7rem;
+}
+::placeholder {
+  font-family: mono;
+
+}
+
+
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+ 
+  animation: spinner 0.6s linear infinite;
+  margin: 0 auto;
+}
+
+/* title */
+
+.title {
+  text-align: center;
+  font-size: 44px;
+  color: aquamarine;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.search-form {
+  width: var(--view-width);
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.card{
+  height:100px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+  margin-top: -10px;
+  border-radius: 0px 0px 10px 10px;
+}
+.search-input {
+  height: 45px;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  /* border-right: none; */
+}
+.card .bekki{
+  padding: auto;
+}
+.search-form .btn {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #fff;
+  border: none;
+}
+.search-form .btn:hover{
+  background-color: yellowgreen;
+  color: #fff;
+}
+
+
+/* 
+========
+Gallery
+========
+*/
+
+.image-container {
+  width: var(--view-width);
+  max-width: var(--max-width);
+  margin: 3rem auto;
+  display: grid;
+  gap: 2rem;
+}
+
+.image-container .img {
+  height: 10rem;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .image-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* CARDIMG */
+.cardImg{
+  width: 100vh;
+  height: 100%;
+  display: block;
+}
+.image-container .cardImg h5{
+  background-color: #fff;
+  margin-top: 5px;
+}
